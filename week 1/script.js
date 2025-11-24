@@ -42,3 +42,83 @@ themeToggle?.addEventListener('click', toggleTheme);
 navToggle?.addEventListener('click', toggleNav);
 if (navList) initNavLinks();
 
+
+// Simple Calculator Logic
+const calcDisplay = document.getElementById('calc-display');
+const calcButtons = document.querySelectorAll('.calc-btn');
+let calcCurrent = '';
+let calcOperator = '';
+let calcOperand = '';
+let calcResultShown = false;
+
+function updateCalcDisplay(val) {
+  calcDisplay.textContent = val;
+}
+
+function clearCalc() {
+  calcCurrent = '';
+  calcOperator = '';
+  calcOperand = '';
+  calcResultShown = false;
+  updateCalcDisplay('0');
+}
+
+function calculate() {
+  let result = 0;
+  const a = parseFloat(calcOperand);
+  const b = parseFloat(calcCurrent);
+  if (isNaN(a) || isNaN(b)) return calcCurrent || calcOperand || '0';
+  switch (calcOperator) {
+    case '+': result = a + b; break;
+    case '-': result = a - b; break;
+    case '*': result = a * b; break;
+    case '/': result = b !== 0 ? a / b : 'Err'; break;
+    default: return calcCurrent;
+  }
+  return result.toString();
+}
+
+calcButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const val = btn.getAttribute('data-value');
+    if (val === 'C') {
+      clearCalc();
+    } else if (val === '=') {
+      if (calcOperator && calcOperand !== '' && calcCurrent !== '') {
+        const result = calculate();
+        updateCalcDisplay(result);
+        calcCurrent = result;
+        calcOperator = '';
+        calcOperand = '';
+        calcResultShown = true;
+      }
+    } else if ('+-*/'.includes(val)) {
+      if (calcCurrent !== '') {
+        if (calcOperator && calcOperand !== '') {
+          // Chain operations
+          const result = calculate();
+          calcOperand = result;
+          updateCalcDisplay(result);
+        } else {
+          calcOperand = calcCurrent;
+        }
+        calcOperator = val;
+        calcCurrent = '';
+        calcResultShown = false;
+      }
+    } else {
+      if (calcResultShown) {
+        calcCurrent = '';
+        calcResultShown = false;
+      }
+      // Prevent multiple decimals
+      if (val === '.' && calcCurrent.includes('.')) return;
+      calcCurrent += val;
+      updateCalcDisplay(calcCurrent);
+    }
+  });
+});
+
+// Initialize calculator display
+if (calcDisplay) updateCalcDisplay('0');
+
