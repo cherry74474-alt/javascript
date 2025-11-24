@@ -24,18 +24,26 @@ const getLetterGrade = (percentage) => {
 };
 
 const getGPA = (percentage) => {
-  if (percentage >= 97) return 4.0;
-  if (percentage >= 93) return 4.0;
-  if (percentage >= 90) return 3.7;
-  if (percentage >= 87) return 3.3;
-  if (percentage >= 83) return 3.0;
-  if (percentage >= 80) return 2.7;
-  if (percentage >= 77) return 2.3;
-  if (percentage >= 73) return 2.0;
-  if (percentage >= 70) return 1.7;
-  if (percentage >= 67) return 1.3;
-  if (percentage >= 63) return 1.0;
-  if (percentage >= 60) return 0.7;
+  // 10-point CGPA scale
+  if (percentage >= 95) return 10.0;
+  if (percentage >= 90) return 9.5;
+  if (percentage >= 85) return 9.0;
+  if (percentage >= 80) return 8.5;
+  if (percentage >= 75) return 8.0;
+  if (percentage >= 70) return 7.5;
+  if (percentage >= 65) return 7.0;
+  if (percentage >= 60) return 6.5;
+  if (percentage >= 55) return 6.0;
+  if (percentage >= 50) return 5.5;
+  if (percentage >= 45) return 5.0;
+  if (percentage >= 40) return 4.5;
+  if (percentage >= 35) return 4.0;
+  if (percentage >= 30) return 3.5;
+  if (percentage >= 25) return 3.0;
+  if (percentage >= 20) return 2.5;
+  if (percentage >= 15) return 2.0;
+  if (percentage >= 10) return 1.5;
+  if (percentage >= 5) return 1.0;
   return 0.0;
 };
 
@@ -126,7 +134,7 @@ const renderCourse = (course) => {
             ${letterGrade}
           </span>
           <span class="grade-text">${percentage}%</span>
-          <span class="grade-text">GPA: ${gpa}</span>
+          <span class="grade-text">CGPA: ${gpa}</span>
         </div>
       </div>
       <button class="btn-icon" data-action="delete-course" data-course-id="${course.id}" aria-label="Delete course">
