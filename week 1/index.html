@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio of a web developer." />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">DT</div>
+      <nav class="nav">
+        <button class="nav__toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon">☀️</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero__content">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Dhiraj Thakur</h1>
+          <p class="hero__subtitle">
+            Frontend engineer crafting thoughtful digital experiences with clean
+            code, inclusive design, and a human-centered mindset.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View Projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero__card">
+          <div class="hero__avatar" aria-hidden="true">DT</div>
+          <ul class="hero__stats">
+            <li>
+              <span>5+</span>
+              <p>Years Experience</p>
+            </li>
+            <li>
+              <span>24</span>
+              <p>Projects Delivered</p>
+            </li>
+            <li>
+              <span>12</span>
+              <p>Happy Clients</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section__header">
+          <p class="eyebrow">About</p>
+          <h2>Who I Am</h2>
+        </div>
+        <div class="about">
+          <p>
+            I'm a multidisciplinary developer who loves translating human
+            problems into elegant software. I focus on accessible design,
+            maintainable architecture, and clear communication.
+          </p>
+          <p>
+            When I'm not shipping features, you'll find me creating game engines  , video editing or playing games.
+          </p>
+        </div>
+      </section>
+
+      <section id="skills" class="section section--alt">
+        <div class="section__header">
+          <p class="eyebrow">Toolkit</p>
+          <h2>Skills & Tech</h2>
+        </div>
+        <div class="skills">
+          <article>
+            <h3>Core Skills</h3>
+            <ul>
+              <li>Responsive UI development</li>
+              <li>Design systems & accessibility</li>
+              <li>Performance optimization</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Tech Stack</h3>
+            <ul>
+              <li>JavaScript </li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </article>
+          <article>
+            <h3>Tools</h3>
+            <ul>
+              <li>VS Code</li>
+              <li>Git & GitHub</li>
+              <li>Jest & Testing Library</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="section__header">
+          <p class="eyebrow">Projects</p>
+          <h2>Projects</h2>
+        </div>
+        <div class="projects">
+          <article class="project-card">
+            <p class="project-card__label">Case Study</p>
+            <h3>Pulse Analytics</h3>
+            <p>
+              A healthcare dashboard that surfaces actionable insights for
+              clinicians. Led UI architecture and accessibility audits.
+            </p>
+            <ul class="project-card__tags">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Data Viz</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="#" aria-label="View live Pulse Analytics project"
+                >Live Site</a
+              >
+              <a href="#" aria-label="View Pulse Analytics repository"
+                >Repository</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-card__label">Product</p>
+            <h3>Voyage Travel UI Kit</h3>
+            <p>
+              Built a modular design system with tokens, documentation, and
+              interactive components for a travel startup.
+            </p>
+            <ul class="project-card__tags">
+              <li>Design Systems</li>
+              <li>Storybook</li>
+              <li>SASS</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="#" aria-label="View live Voyage UI Kit project"
+                >Live Site</a
+              >
+              <a href="#" aria-label="View Voyage UI Kit repository"
+                >Repository</a
+              >
+            </div>
+          </article>
+
+          <article class="project-card">
+            <p class="project-card__label">Experiment</p>
+            <h3>Ambient Weather App</h3>
+            <p>
+              Micro-interaction heavy PWA that visualizes forecasts through
+              soundscapes and gradients.
+            </p>
+            <ul class="project-card__tags">
+              <li>PWA</li>
+              <li>Web Audio API</li>
+              <li>CSS Art</li>
+            </ul>
+            <div class="project-card__links">
+              <a href="#" aria-label="View live Ambient Weather project"
+                >Live Site</a
+              >
+              <a href="#" aria-label="View Ambient Weather repository"
+                >Repository</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--alt">
+        <div class="section__header">
+          <p class="eyebrow">Connect</p>
+          <h2>Contact</h2>
+        </div>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="How can I help?" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Jordan Doe. Built with curiosity.</p>
+      <div class="socials">
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener"
+          >LinkedIn</a
+        >
+        <a href="mailto:jordan@example.com">Email</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
