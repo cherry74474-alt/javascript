@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header>
+        <p class="eyebrow">number guessing game</p>
+        <h1>Guess the Number</h1>
+        <p class="muted">
+          I'm thinking of a number between 1 and 100. Can you guess it?
+        </p>
+      </header>
+
+      <div class="game-area">
+        <div class="status" id="status" aria-live="polite">
+          <p id="message">Enter your guess below!</p>
+          <div class="attempts" id="attempts">Attempts: <span id="attemptCount">0</span></div>
+        </div>
+
+        <div class="input-section">
+          <input
+            type="number"
+            id="guessInput"
+            min="1"
+            max="100"
+            placeholder="Enter a number (1-100)"
+            aria-label="Enter your guess"
+          />
+          <button id="submitBtn" class="btn btn--primary">Guess</button>
+        </div>
+
+        <div class="previous-guesses" id="previousGuesses" aria-live="polite">
+          <p class="previous-guesses__label">Previous guesses:</p>
+          <div class="guesses-list" id="guessesList"></div>
+        </div>
+
+        <button id="resetBtn" class="btn btn--ghost" style="display: none;">
+          New Game
+        </button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

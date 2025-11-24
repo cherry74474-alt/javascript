@@ -1,0 +1,234 @@
+:root {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: #0f172a;
+  background: #0f172a;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top, #1f2a44, #0f172a 60%);
+  color: #0f172a;
+}
+
+.game {
+  background: #f8fafc;
+  border-radius: 2rem;
+  padding: 2rem;
+  width: min(500px, 90vw);
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+  display: grid;
+  gap: 2rem;
+}
+
+header {
+  text-align: center;
+}
+
+.eyebrow {
+  letter-spacing: 0.3rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 0.3rem;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.muted {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0;
+}
+
+.game-area {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.status {
+  background: #0f172a;
+  color: #f1f5f9;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: background 300ms ease;
+}
+
+.status--success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.status--warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.status--error {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+#message {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  min-height: 1.5em;
+}
+
+.attempts {
+  font-size: 0.9rem;
+  color: rgba(241, 245, 249, 0.8);
+  font-weight: 500;
+}
+
+.input-section {
+  display: grid;
+  gap: 1rem;
+}
+
+#guessInput {
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+  background: #ffffff;
+  color: #0f172a;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+  font-weight: 600;
+}
+
+#guessInput:focus {
+  outline: none;
+  border-color: #fb923c;
+  box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.2);
+}
+
+#guessInput:disabled {
+  background: #f1f5f9;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+  font-family: inherit;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn--primary {
+  background: #fb923c;
+  color: #fff7ed;
+  box-shadow: 0 6px 15px rgba(251, 146, 60, 0.35);
+}
+
+.btn--primary:hover:not(:disabled) {
+  box-shadow: 0 8px 20px rgba(251, 146, 60, 0.45);
+}
+
+.btn--ghost {
+  background: #e2e8f0;
+  color: #0f172a;
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.15);
+}
+
+.btn--ghost:hover {
+  background: #cbd5e1;
+}
+
+.previous-guesses {
+  background: #f1f5f9;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  min-height: 80px;
+}
+
+.previous-guesses__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guesses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 1.5em;
+}
+
+.guess-item {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 200ms ease;
+}
+
+.guess-item--low {
+  border-color: #f59e0b;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.guess-item--high {
+  border-color: #ef4444;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.guess-item--correct {
+  border-color: #10b981;
+  background: #d1fae5;
+  color: #065f46;
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
