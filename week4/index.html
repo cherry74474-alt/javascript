@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 4 Unit Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="converter">
+      <header>
+        <p class="eyebrow">unit converter</p>
+        <h1>Unit Converter</h1>
+        <p class="muted">
+          Convert between different units of measurement instantly.
+        </p>
+      </header>
+
+      <div class="converter-area">
+        <div class="category-selector">
+          <label for="categorySelect" class="label">Category</label>
+          <select id="categorySelect" class="select" aria-label="Select conversion category">
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+            <option value="volume">Volume</option>
+          </select>
+        </div>
+
+        <div class="conversion-panel">
+          <div class="input-group">
+            <label for="fromUnit" class="label">From</label>
+            <select id="fromUnit" class="select" aria-label="Select source unit"></select>
+            <input
+              type="number"
+              id="fromValue"
+              class="input"
+              placeholder="Enter value"
+              aria-label="Enter value to convert"
+              step="any"
+            />
+          </div>
+
+          <button id="swapBtn" class="swap-btn" aria-label="Swap units">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 16V4m0 0L3 8m4-4l4 4M17 8V20m0 0l4-4m-4 4l-4-4"/>
+            </svg>
+          </button>
+
+          <div class="input-group">
+            <label for="toUnit" class="label">To</label>
+            <select id="toUnit" class="select" aria-label="Select target unit"></select>
+            <input
+              type="number"
+              id="toValue"
+              class="input"
+              placeholder="Result"
+              aria-label="Converted result"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="result-display" id="resultDisplay" aria-live="polite">
+          <p id="resultText" class="result-text"></p>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
