@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 5 Student Grade Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="tracker">
+      <header>
+        <p class="eyebrow">student grade tracker</p>
+        <h1>Grade Tracker</h1>
+        <p class="muted">
+          Track your courses, assignments, and calculate your GPA.
+        </p>
+      </header>
+
+      <div class="tracker-area">
+        <div class="overall-stats" id="overallStats">
+          <div class="stat-card">
+            <p class="stat-label">Overall GPA</p>
+            <p class="stat-value" id="overallGPA">0.00</p>
+          </div>
+          <div class="stat-card">
+            <p class="stat-label">Total Courses</p>
+            <p class="stat-value" id="totalCourses">0</p>
+          </div>
+        </div>
+
+        <div class="add-course-section">
+          <h2 class="section-title">Add Course</h2>
+          <div class="form-row">
+            <input
+              type="text"
+              id="courseNameInput"
+              class="input"
+              placeholder="Course name (e.g., Mathematics)"
+              aria-label="Course name"
+            />
+            <button id="addCourseBtn" class="btn btn--primary">Add Course</button>
+          </div>
+        </div>
+
+        <div class="courses-list" id="coursesList">
+          <p class="empty-state" id="emptyState">No courses added yet. Add a course to get started!</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
