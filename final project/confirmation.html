@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Confirmed - SkyWings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <span class="logo-text">SkyWings</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search Flights</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-container">
+      <div class="confirmation-container">
+        <div class="confirmation-card">
+          <div class="success-animation">
+            <div class="success-icon">✓</div>
+            <div class="success-circle"></div>
+          </div>
+          
+          <h1>Booking Confirmed!</h1>
+          <p class="confirmation-subtitle">Your flight has been successfully booked</p>
+
+          <div class="booking-details-card" id="bookingDetailsCard">
+            <h2>Booking Details</h2>
+            <div id="bookingDetails"></div>
+          </div>
+
+          <div class="info-box">
+            <h3>What's Next?</h3>
+            <ul class="next-steps">
+              <li>✓ A confirmation email has been sent to your email address</li>
+              <li>✓ Check your inbox for your e-ticket and booking reference</li>
+              <li>✓ Arrive at the airport at least 2 hours before departure</li>
+              <li>✓ Have your ID and booking reference ready</li>
+            </ul>
+          </div>
+
+          <div class="confirmation-actions">
+            <a href="index.html" class="btn btn--primary btn--large">Back to Home</a>
+            <a href="search.html" class="btn btn--ghost btn--large">Book Another Flight</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>SkyWings</h4>
+          <p>Your trusted partner for flight bookings worldwide.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search Flights</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SkyWings. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="confirmation.js"></script>
+  </body>
+</html>
+

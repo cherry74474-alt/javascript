@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Booking - SkyWings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <span class="logo-text">SkyWings</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html">Search Flights</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-container">
+      <div class="page-header">
+        <h1>Complete Your Booking</h1>
+        <p>Please provide your details to confirm your flight</p>
+      </div>
+
+      <div class="booking-container">
+        <div class="booking-content">
+          <div class="flight-summary-card" id="flightSummaryCard">
+            <h3>Flight Details</h3>
+            <div id="flightSummary"></div>
+          </div>
+
+          <div class="booking-form-card">
+            <h2>Passenger Information</h2>
+            <form id="bookingForm" class="booking-form">
+              <div id="passengerForms"></div>
+
+              <div class="form-section">
+                <h3>Contact Information</h3>
+                <div class="form-row">
+                  <div class="input-group">
+                    <label for="contactEmail" class="label">Email Address</label>
+                    <input
+                      type="email"
+                      id="contactEmail"
+                      class="input"
+                      placeholder="your.email@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="contactPhone" class="label">Phone Number</label>
+                    <input
+                      type="tel"
+                      id="contactPhone"
+                      class="input"
+                      placeholder="+1 (555) 123-4567"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <h3>Payment Summary</h3>
+                <div class="payment-summary" id="paymentSummary"></div>
+              </div>
+
+              <div class="form-actions">
+                <a href="search.html" class="btn btn--ghost">Cancel</a>
+                <button type="submit" class="btn btn--primary btn--large">Confirm & Pay</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>SkyWings</h4>
+          <p>Your trusted partner for flight bookings worldwide.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search Flights</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SkyWings. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="booking.js"></script>
+  </body>
+</html>
+

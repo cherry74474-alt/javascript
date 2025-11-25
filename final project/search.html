@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Flights - SkyWings</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">✈</span>
+          <span class="logo-text">SkyWings</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html" class="active">Search Flights</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="page-container">
+      <div class="page-header">
+        <h1>Search Flights</h1>
+        <p>Find the perfect flight for your journey</p>
+      </div>
+
+      <div class="search-section">
+        <div class="search-form-card">
+          <form id="searchForm" class="search-form">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="origin" class="label">From</label>
+                <input
+                  type="text"
+                  id="origin"
+                  class="input"
+                  placeholder="City or Airport Code"
+                  list="airports"
+                  required
+                />
+              </div>
+              <button type="button" class="swap-btn" id="swapBtn" aria-label="Swap origin and destination">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 16V4m0 0L3 8m4-4l4 4M17 8V20m0 0l4-4m-4 4l-4-4"/>
+                </svg>
+              </button>
+              <div class="input-group">
+                <label for="destination" class="label">To</label>
+                <input
+                  type="text"
+                  id="destination"
+                  class="input"
+                  placeholder="City or Airport Code"
+                  list="airports"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="departDate" class="label">Departure Date</label>
+                <input
+                  type="date"
+                  id="departDate"
+                  class="input"
+                  required
+                />
+              </div>
+              <div class="input-group">
+                <label for="returnDate" class="label">Return Date (Optional)</label>
+                <input
+                  type="date"
+                  id="returnDate"
+                  class="input"
+                />
+              </div>
+              <div class="input-group">
+                <label for="passengers" class="label">Passengers</label>
+                <select id="passengers" class="input select">
+                  <option value="1">1 Passenger</option>
+                  <option value="2">2 Passengers</option>
+                  <option value="3">3 Passengers</option>
+                  <option value="4">4 Passengers</option>
+                  <option value="5">5 Passengers</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" id="searchBtn" class="btn btn--primary btn--large btn--block">
+              Search Flights
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="loading" id="loading" style="display: none;">
+        <div class="spinner"></div>
+        <p>Searching for flights...</p>
+      </div>
+
+      <div class="error-message" id="errorMessage" style="display: none;"></div>
+
+      <div class="results-section" id="resultsSection" style="display: none;">
+        <div class="results-header">
+          <h2>Available Flights</h2>
+          <p class="results-count" id="resultsCount"></p>
+        </div>
+        <div class="flights-list" id="flightsList"></div>
+      </div>
+
+      <datalist id="airports">
+        <option value="JFK">New York (JFK)</option>
+        <option value="LAX">Los Angeles (LAX)</option>
+        <option value="LHR">London (LHR)</option>
+        <option value="CDG">Paris (CDG)</option>
+        <option value="DXB">Dubai (DXB)</option>
+        <option value="NRT">Tokyo (NRT)</option>
+        <option value="SYD">Sydney (SYD)</option>
+        <option value="SFO">San Francisco (SFO)</option>
+        <option value="ORD">Chicago (ORD)</option>
+        <option value="MIA">Miami (MIA)</option>
+      </datalist>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>SkyWings</h4>
+          <p>Your trusted partner for flight bookings worldwide.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="search.html">Search Flights</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#help">Help Center</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SkyWings. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="search.js"></script>
+  </body>
+</html>
+
